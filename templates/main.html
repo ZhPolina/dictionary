@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+      <link rel="stylesheet", type="text/css", href="{{url_for('static', 
+filename='css/style.css')}}">
+      <meta charset="UTF-8">
+      <title>Глоссарий</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Глоссарий терминов ВКР</h2>
+       <div style="top: 5em; left: 20em; margin-bottom: 1em">
+        <form method="post" action="/graph">
+            <button type="submit" class="btn btn-secondary">MindMap</button>
+        </form>
+        </div>
+       <div style="top: 5em; left: 20em; margin-bottom: 1em">
+        <form method="post" action="/search_word">
+            <input type="text" name="text">
+            <button type="submit" class="btn btn-secondary" >Поиск</button>
+         </form>
+       </div>
+      <div style="top: 5em; left: 20em; margin-bottom: 1em">
+        <h3>Определение</h3>
+          {% for defenitions in defenitions%}
+        <div>{{ defenitions}}</div>
+          {% endfor %}
+      </div>
+      <div style=" top: 5em; right: 20em; left: 20em; margin-bottom: 1em">
+        <h3>История</h3>
+          {% for word in words %}
+        <div >{{ word}}</div>
+          {% endfor %}
+        </div>
+       <div style="top: 5em; left: 20em; margin-bottom: 1em">
+        <h3>Термины</h3>
+        <table>
+          <tr>
+            <th>Термин</th>
+            <th>Определение</th>
+          </tr>   
+              {% for term in data%}
+          <tr>   
+            <td><b>{{ term}}</b></td>
+            <td>{{data[term][0]}}</td>
+         </tr>
+                 {% endfor %}
+          </table>
+        </div>
+    </div>
+  </body>
+</html>

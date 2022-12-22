@@ -1,0 +1,52 @@
+h2 {
+ text-align: center;
+ color: #656665;
+}
+
+h3 {
+ color: #656665;
+ font-size: 24px;
+}
+
+form {
+  position: relative;
+  width: 100%;
+}
+
+body {
+  font-size: 18px;
+  color: #656665;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+input {
+  width: 40%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #656665;
+  border-radius: 5px;
+  outline: none;
+  background: white;
+  color: #9E9C9C;
+}
+
+table {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 5px;
+  background: #ECE9E0;
+  color: #656665;
+  border: 16px solid #ECE9E0;
+  border-radius: 5px;
+}
+
+th {
+font-size: 18px;
+padding: 10px;
+}
+
+td {
+background: white;
+padding: 10px;
+}
+
