@@ -1,11 +1,14 @@
 # dictionary
 Клонируйте этот репозиторий:
+
 git clone https://github.com/ZhPolina/dictionary.git
 
 Запустите docker-compose:
+
 docker-compose up --build
 
 Протестируйте localhost api в вашем браузере:
+
 http://127.0.0.1:5000/
 
 По основному маршруту возращается HTML страница, содержащая полный глоссарий терминов ВКР.
