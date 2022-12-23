@@ -2,10 +2,11 @@ version: '3.8'
 services:
   flask:
     build: ./
-    container_name: cont_dict
+    image: dictionary:latest
+    container_name: terms
     restart: on-failure
     environment:
-      - FLASK_APP=app.py
+      - FLASK_APP=main.py
     volumes:
       - ./:/server
     ports:
